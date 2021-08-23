@@ -27,7 +27,7 @@ rm(list = ls())
 
 ### 1) load data and rename variables ################
 setwd('C:/Users/Maxi/Google Drive/personal/Mx/MKM/data/')
-MKM2 <- read.table("BeckerRepantis_et_al_2021_MKMlong2.csv", sep = ";", dec = ",", header=TRUE, na.strings=c("", " " , "NA", "NAN" )) 
+MKM2 <- read.table("BeckerRepantis_et_al_2021_MKM_long.csv", sep = ";", dec = ",", header=TRUE, na.strings=c("", " " , "NA", "NAN" )) 
 
 #rename variables:
 MKM2$early_visRecall  = MKM2$recallScanR
@@ -177,7 +177,7 @@ p.adjust(p, method = c( "fdr"), n = length(p))
 ########################################################################### #
 ############################################################################# #
 #### 3) Results: Build latent memory change factor  #######
-MKM3 <- read.table("MKM_missing_meanersetzt_cluster.csv", sep = ";", dec = ",", header=TRUE, na.strings=c("", " " , "NA", "NAN" )) 
+MKM3 <- read.table("BeckerRepantis_et_al_2021_MKM_short.csv", sep = ";", dec = ",", header=TRUE, na.strings=c("", " " , "NA", "NAN" )) 
 
 #create difference values (Stimulant - Placebo)
 MKM3$Diff_recallScanR      = (MKM3$Enhancer_recallScanR  - MKM3$Placebo_recallScanR) # memory im scanner(70 W??rter merken)
